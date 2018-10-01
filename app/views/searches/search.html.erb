@@ -8,7 +8,9 @@
   <%= @resp.body if @resp %>
 </div>
 <div>
-  <% if @venues %>
+  <% if @error %>
+    <p><%= @error %></p>
+  <% elsif @venues %>
     <ul>
     <% @venues.each do |venue| %>
       <li>
